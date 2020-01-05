@@ -20,6 +20,8 @@ class Layout(override val config: Config) : Specific {
     var bargap by double() // FIXME("number between or equal to 0 and 1")
     var bargroupgap by double() // FIXME("number between or equal to 0 and 1")
     var legend by spec(Legend)
+    var width by double()
+    var height by double()
 
     fun legend(block: Legend.() -> Unit) {
         legend = Legend.build(block)
